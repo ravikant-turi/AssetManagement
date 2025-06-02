@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee /WEB-INF/schema/web-facesconfig_2_0.xsd"
+	version="2.0" metadata-complete="false">
+	<!-- This file must be present with our jar, even if it is empty. Otherwise, 
+		our Java annotations won't get scanned! -->
+		
+		
+	<!-- Model Bean -->
+    <managed-bean>
+        <managed-bean-name>login</managed-bean-name>
+        <managed-bean-class>com.java.model.Login</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <!-- DAO Bean -->
+    <managed-bean>
+        <managed-bean-name>loginDao</managed-bean-name>
+        <managed-bean-class>com.java.dao.impl.LoginDaoImpl</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean>
+
+    <!-- Controller Bean -->
+    <managed-bean>
+        <managed-bean-name>loginController</managed-bean-name>
+        <managed-bean-class>com.java.controller.LoginController</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+
+        <managed-property>
+            <property-name>login</property-name>
+            <property-class>com.java.model.Login</property-class>
+            <value>#{login}</value>
+        </managed-property>
+
+        <managed-property>
+            <property-name>loginDao</property-name>
+            <property-class>com.java.dao.impl.LoginDaoImpl</property-class>
+            <value>#{loginDao}</value>
+        </managed-property>
+    </managed-bean>
+    
+	</faces-config>

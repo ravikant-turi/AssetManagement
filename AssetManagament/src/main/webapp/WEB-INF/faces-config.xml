@@ -6,6 +6,50 @@
 	<!-- This file must be present with our jar, even if it is empty. Otherwise, 
 		our Java annotations won't get scanned! -->
 
+<!-- Asset Bean -->
+
+<managed-bean>
+    <managed-bean-name>asset</managed-bean-name>
+    <managed-bean-class>com.java.model.Asset</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+<!-- AssetDaoImpl Bean -->
+<managed-bean>
+    <managed-bean-name>assetDao</managed-bean-name>
+    <managed-bean-class>com.java.daoImpl.AssetDaoImpl</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+</managed-bean>
+
+<!-- AssetController Bean -->
+<managed-bean>
+    <managed-bean-name>assetController</managed-bean-name>
+    <managed-bean-class>com.java.controller.AssetController</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+
+    <!-- Injecting asset -->
+    <managed-property>
+        <property-name>asset</property-name>
+        <property-class>com.java.model.Asset</property-class>
+        <value>#{asset}</value>
+    </managed-property>
+
+    <!-- Injecting assetDao -->
+    <managed-property>
+        <property-name>assetdao</property-name>
+        <property-class>com.java.dao.AssetDao</property-class>
+        <value>#{assetDao}</value>
+    </managed-property>
+</managed-bean>
+
+
+
+
+
+
+
+
+
 
 	<!-- Model Bean -->
 	<managed-bean>

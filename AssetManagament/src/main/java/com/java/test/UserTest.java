@@ -20,9 +20,9 @@ public class UserTest {
 		
 		
 		
-		lgDao.signUp(login);
+//		lgDao.signUp(login);
 		
-//		System.out.println(lgDao.signIn("nname", "passs"));
+		System.out.println(lgDao.signIn("nname", "passs"));
 	}
 
 }

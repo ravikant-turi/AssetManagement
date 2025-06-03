@@ -1,21 +1,19 @@
 package com.java.model;
 
-
-
 public class Asset {
 	
-	private int assetid;
+	private int id;
 	
 	private String name;
 	
-	private String quantity;
+	private int quantity;
 
 	public int getId() {
-		return assetid;
+		return id;
 	}
 
 	public void setId(int id) {
-		this.assetid = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -26,14 +24,14 @@ public class Asset {
 		this.name = name;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-
+	
 	
 	
 	

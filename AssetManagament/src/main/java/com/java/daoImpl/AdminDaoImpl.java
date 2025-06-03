@@ -9,7 +9,6 @@ import org.hibernate.classic.Session;
 
 import com.java.dao.AdminDao;
 import com.java.model.Admin;
-import com.java.model.Login;
 import com.java.util.HibernateUtil;
 
 public class AdminDaoImpl implements AdminDao {

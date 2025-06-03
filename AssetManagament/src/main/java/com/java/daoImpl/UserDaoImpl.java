@@ -7,14 +7,14 @@ import org.hibernate.Query;
 import org.hibernate.Transaction;
 import org.hibernate.classic.Session;
 
-import com.java.dao.LoginDao;
-import com.java.model.Login;
+import com.java.dao.UserDao;
+import com.java.model.User;
 import com.java.util.HibernateUtil;
 
-public class  LoginDaoImpl implements LoginDao {
+public class  UserDaoImpl implements UserDao {
 
 	@Override
-	public String signUp(Login user) {
+	public String signUp(User user) {
 		FacesContext context = FacesContext.getCurrentInstance();
 		boolean valid = true;
 
@@ -67,11 +67,11 @@ public class  LoginDaoImpl implements LoginDao {
 		}
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		Query query = session.createQuery("from Login where name = :name and passcode = :passcode");
+		Query query = session.createQuery("from User where name = :name and passcode = :passcode");
 		query.setParameter("name", name);
 		query.setParameter("passcode", passcode);
 
-		Login result = (Login) query.uniqueResult();
+		User result = (User) query.uniqueResult();
 		session.close();
 
 		if (result != null) {

@@ -17,18 +17,18 @@
         <h2>Login</h2>
 
         <h:outputLabel value="Name:" />
-        <h:inputText value="#{loginController.login.name}" required="true" requiredMessage="Name is required" />
+        <h:inputText value="#{userController.user.name}" required="true" requiredMessage="Name is required" />
         <h:message for="name" />
 
         <br/>
 
         <h:outputLabel value="Passcode:" />
-        <h:inputText value="#{loginController.login.passcode}" required="true" requiredMessage="Passcode is required" />
+        <h:inputText value="#{userController.user.passcode}" required="true" requiredMessage="Passcode is required" />
         <h:message for="passcode" />
 
         <br/><br/>
 
-        <h:commandButton value="Sign In" action="#{loginController.signIn}" />
+        <h:commandButton value="Sign In" action="#{userController.signIn}" />
         <h:messages globalOnly="true" layout="table"/>
     </h:form>
 

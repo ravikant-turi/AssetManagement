@@ -9,36 +9,36 @@
 
 	<!-- Model Bean -->
 	<managed-bean>
-		<managed-bean-name>login</managed-bean-name>
-		<managed-bean-class>com.java.model.Login</managed-bean-class>
+		<managed-bean-name>user</managed-bean-name>
+		<managed-bean-class>com.java.model.User</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 	<!-- DAO Bean -->
 	<managed-bean>
-		<managed-bean-name>loginDao</managed-bean-name>
-		<managed-bean-class> com.java.daoImpl.LoginDaoImpl
+		<managed-bean-name>userDao</managed-bean-name>
+		<managed-bean-class> com.java.daoImpl.UserDaoImpl
 		</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
 
 	<!-- Controller Bean -->
 	<managed-bean>
-		<managed-bean-name>loginController</managed-bean-name>
-		<managed-bean-class>com.java.controller.LoginController
+		<managed-bean-name>userController</managed-bean-name>
+		<managed-bean-class>com.java.controller.UserController
 		</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 
 		<managed-property>
-			<property-name>login</property-name>
-			<property-class>com.java.model.Login</property-class>
-			<value>#{login}</value>
+			<property-name>user</property-name>
+			<property-class>com.java.model.User</property-class>
+			<value>#{user}</value>
 		</managed-property>
 
 		<managed-property>
-			<property-name>loginDao</property-name>
-			<property-class> com.java.daoImpl.LoginDaoImpl</property-class>
-			<value>#{loginDao}</value>
+			<property-name>userDao</property-name>
+			<property-class> com.java.daoImpl.UserDaoImpl</property-class>
+			<value>#{userDao}</value>
 		</managed-property>
 	</managed-bean>
 

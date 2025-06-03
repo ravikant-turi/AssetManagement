@@ -28,8 +28,7 @@
 
         <!-- XML Mapping files -->
         <mapping resource="com/java/mapping/Asset.hbm.xml"/>
-        <mapping resource="com/java/mapping/Employ.hbm.xml"/>
-        <mapping resource="com/java/mapping/login.hbm.xml"/>
+        <mapping resource="com/java/mapping/User.hbm.xml"/>
         <mapping resource="com/java/mapping/Admin.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

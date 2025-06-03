@@ -3,17 +3,17 @@ package com.java.controller;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
-import com.java.dao.LoginDao;
-import com.java.model.Login;
+import com.java.dao.UserDao;
+import com.java.model.User;
 
 
-public class LoginController {
+public class UserController {
 
-    private Login login ;
-    private LoginDao loginDao ;
+    private User user ;
+    private UserDao userDao ;
 
     public String signUp() {
-        String result = loginDao.signUp(login);
+        String result = userDao.signUp(user);
 
         if (result == null) {
             // Validation messages already added inside DAO
@@ -22,12 +22,12 @@ public class LoginController {
 
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage(FacesMessage.SEVERITY_INFO, result, null));
-        login = new Login(); // reset form
+        user = new User(); // reset form
         return "login"; // navigate to login.xhtml
     }
 
     public String signIn() {
-        String result = loginDao.signIn(String.valueOf(login.getName()), String.valueOf(login.getPasscode()));
+        String result = userDao.signIn(String.valueOf(user.getName()), String.valueOf(user.getPasscode()));
 
         if ("valid".equals(result)) {
             return "message"; // navigate to welcome.xhtml
@@ -40,21 +40,23 @@ public class LoginController {
         return null;
     }
 
-	public Login getLogin() {
-		return login;
+	public User getUser() {
+		return user;
 	}
 
-	public void setLogin(Login login) {
-		this.login = login;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public LoginDao getLoginDao() {
-		return loginDao;
+	public UserDao getUserDao() {
+		return userDao;
 	}
 
-	public void setLoginDao(LoginDao loginDao) {
-		this.loginDao = loginDao;
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
 	}
+
+	
 
     
     

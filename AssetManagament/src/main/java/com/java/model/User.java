@@ -1,14 +1,26 @@
 package com.java.model;
 
-import lombok.Data;
-
-
-public class Login {
+public class User {
 	
 	int loginId;
 	String name;
 	String passcode;
 	String email;
+	
+	
+	
+	private Status status;
+	
+	
+	
+	
+	
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
 	public int getLoginId() {
 		return loginId;
 	}
@@ -35,7 +47,9 @@ public class Login {
 	}
 	
 	
-	
+	public User() {
+		this.status=status.NOTASSIGNED;
+	}
 	
 	
 

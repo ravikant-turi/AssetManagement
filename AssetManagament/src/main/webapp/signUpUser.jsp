@@ -16,24 +16,24 @@
         <h2>Sign Up</h2>
 
         <h:outputLabel value="Name:" />
-        <h:inputText value="#{loginController.login.name}" required="true" requiredMessage="Name is required" />
+        <h:inputText value="#{userController.user.name}" required="true" requiredMessage="Name is required" />
         <h:message for="name" />
 
         <br/>
 
         <h:outputLabel value="Email:" />
-        <h:inputText value="#{loginController.login.email}" required="true" requiredMessage="Email is required" />
+        <h:inputText value="#{userController.user.email}" required="true" requiredMessage="Email is required" />
         <h:message for="email" />
 
         <br/>
 
         <h:outputLabel value="Passcode:" />
-        <h:inputText value="#{loginController.login.passcode}" required="true" requiredMessage="Passcode is required" />
+        <h:inputText value="#{userController.user.passcode}" required="true" requiredMessage="Passcode is required" />
         <h:message for="passcode" />
 
         <br/><br/>
 
-        <h:commandButton value="Sign Up" action="#{loginController.signUp}" />
+        <h:commandButton value="Sign Up" action="#{userController.signUp}" />
         <h:messages globalOnly="true" layout="table" />
     </h:form>
 

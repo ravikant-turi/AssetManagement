@@ -11,7 +11,7 @@ import com.java.dao.LoginDao;
 import com.java.model.Login;
 import com.java.util.HibernateUtil;
 
-public class LoginDaoImpl implements LoginDao {
+public class  LoginDaoImpl implements LoginDao {
 
 	@Override
 	public String signUp(Login user) {

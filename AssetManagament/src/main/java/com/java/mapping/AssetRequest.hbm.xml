@@ -17,12 +17,13 @@
 		</id>
 
 
- <many-to-one name="requestByUser" class="com.java.model.User"
-			column="requestByUser" not-null="true" />
+ 
+
+ <many-to-one name="requestByUserId" class="com.java.model.User"
+			column="requestByUserId" not-null="true" />
 
 		<many-to-one name="assetRequestId" class="com.java.model.Asset"
 			column="assetRequestId" not-null="true" /> 
-
 
 
 
@@ -43,6 +44,20 @@
 
 
 <!-- 
+
+private int requestId;
+
+//	user Id
+
+	private User requestByUserId;
+
+//	AssetId
+
+	private Asset assetRequestId;
+
+	private RequestStatus requestStatus;
+
+	private Date assignedDate;
 
 <set name="assetRequestId" cascade="all" inverse="true">
 			<key column="assetRequestId" />
